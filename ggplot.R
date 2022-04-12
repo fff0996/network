@@ -16,3 +16,9 @@ ylab("Mean Square of errors") + xlab("Decile of GPS") + ggtitle("Acohol-BMI") + 
 ggplot(d,aes(x=factor(Group),y=var.of.res,fill=factor(subgroup),group=factor(subgroup))) +
 geom_bar(position="dodge", stat="identity",width = 0.7,size =.9 ) + ylab("Variance of Residuals") + xlab("") + 
 ggtitle("Alcohol-BMI") + scale_fill_discrete(name=" ",labels =c("Non-drinker","Moderate drinker","Severe drinker"))
+
+
+
+
+#하나의 plot에 여러개 그리기
+ggplot(tt,aes(x=x_seq,y=y_seq,color=Traits)) + geom_line()

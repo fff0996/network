@@ -22,3 +22,5 @@ ggtitle("Alcohol-BMI") + scale_fill_discrete(name=" ",labels =c("Non-drinker","M
 
 #하나의 plot에 여러개 그리기
 ggplot(tt,aes(x=x_seq,y=y_seq,color=Traits)) + geom_line()
+
+ggplot(tt,aes(x=x_seq,y=y_seq,color=Traits)) + geom_line() + ylab("Probability Density") + xlab("Joint effect size")

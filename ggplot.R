@@ -24,3 +24,6 @@ ggtitle("Alcohol-BMI") + scale_fill_discrete(name=" ",labels =c("Non-drinker","M
 ggplot(tt,aes(x=x_seq,y=y_seq,color=Traits)) + geom_line()
 
 ggplot(tt,aes(x=x_seq,y=y_seq,color=Traits)) + geom_line() + ylab("Probability Density") + xlab("Joint effect size")
+#Residual plot그리기
+mod <- lm(Y~X,data=homo)
+ggplot(mod,aes(.fitted,.resid,group=1)) + geom_point()+ geom_hline(yintercept = 0) + labs(x="fitted values",y="residuals")

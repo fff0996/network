@@ -27,3 +27,6 @@ ggplot(tt,aes(x=x_seq,y=y_seq,color=Traits)) + geom_line() + ylab("Probability D
 #Residual plot그리기
 mod <- lm(Y~X,data=homo)
 ggplot(mod,aes(.fitted,.resid,group=1)) + geom_point()+ geom_hline(yintercept = 0) + labs(x="fitted values",y="residuals")
+
+
+dd %>% ggplot() +  geom_bar(aes(tile10,dd_delta),position="dodge", stat="identity",width = 0.7,size =.9 ) + geom_point(aes(tile10,raw_G_res),group=1) + geom_line(aes(tile10,raw_G_res)) + scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10))

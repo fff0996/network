@@ -30,3 +30,8 @@ ggplot(mod,aes(.fitted,.resid,group=1)) + geom_point()+ geom_hline(yintercept = 
 
 
 dd %>% ggplot() +  geom_bar(aes(tile10,dd_delta),position="dodge", stat="identity",width = 0.7,size =.9 ) + geom_point(aes(tile10,raw_G_res),group=1) + geom_line(aes(tile10,raw_G_res)) + scale_x_continuous(breaks = c(1,2,3,4,5,6,7,8,9,10))
+
+
+
+hist(bmi_2_1$R,breaks="Scott", ylim=c(0,1000), main=NA,ylab=NA,xlab=NA,xlim=c(0,25))
+abline(v=4.437163,col="red")

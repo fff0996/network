@@ -35,3 +35,5 @@ dd %>% ggplot() +  geom_bar(aes(tile10,dd_delta),position="dodge", stat="identit
 
 hist(bmi_2_1$R,breaks="Scott", ylim=c(0,1000), main=NA,ylab=NA,xlab=NA,xlim=c(0,25))
 abline(v=4.437163,col="red")
+
+ ggplot(alt,aes(st_pred_inf)) + geom_density()

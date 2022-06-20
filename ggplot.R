@@ -37,3 +37,6 @@ hist(bmi_2_1$R,breaks="Scott", ylim=c(0,1000), main=NA,ylab=NA,xlab=NA,xlim=c(0,
 abline(v=4.437163,col="red")
 
  ggplot(alt,aes(st_pred_inf)) + geom_density()
+
+ggplot(bmi_2_1,aes(Ob_Pred,fill=col)) + geom_histogram(binwidth=1/3) + geom_vline(xintercept =c(4.43),colour="red")
+

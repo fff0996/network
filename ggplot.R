@@ -40,3 +40,4 @@ abline(v=4.437163,col="red")
 
 ggplot(bmi_2_1,aes(Ob_Pred,fill=col)) + geom_histogram(binwidth=1/3) + geom_vline(xintercept =c(4.43),colour="red")
 
+ggplot(bmi_2_1,aes(Ob_Pred)) + geom_histogram(binwidth=1/5) + geom_vline(xintercept=c(4.439734),colour="red") + labs(x="Errors",y="") + ggtitle("Group1") + coord_cartesian(xlim = c(0,31))

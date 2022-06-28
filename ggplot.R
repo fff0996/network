@@ -44,3 +44,7 @@ ggplot(bmi_2_1,aes(Ob_Pred)) + geom_histogram(binwidth=1/5) + geom_vline(xinterc
 
 
 ggplot(df, aes(x=a,y=b,fill=c))+geom_point()+theme_classic()+theme(legend,position='none')
+
+
+
+ggplot(dd,aes(tile100,per,colour=per)) + geom_point() + theme_classic() + scale_x_continuous(breaks =seq(0,100,by=10)) + labs(x="",y="Prevalence of type 2 diabeter (%)") + theme(legend.position="none")

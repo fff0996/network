@@ -48,3 +48,4 @@ ggplot(df, aes(x=a,y=b,fill=c))+geom_point()+theme_classic()+theme(legend,positi
 
 
 ggplot(dd,aes(tile100,per,colour=per)) + geom_point() + theme_classic() + scale_x_continuous(breaks =seq(0,100,by=10)) + labs(x="",y="Prevalence of type 2 diabeter (%)") + theme(legend.position="none")
+ggplot(data=r,aes(x=r)) + geom_bar()+ theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10)) + geom_text(stat="count",aes(label=..count..),position=position_dodge(width=1.8),vjust=-0.5) + labs(x="Category",y="Count")

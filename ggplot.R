@@ -53,3 +53,4 @@ ggplot(data=r,aes(x=r)) + geom_bar()+ theme(axis.text.x = element_text(angle = 4
 
 
 ggplot(d,aes(x=Category,y=Count)) + geom_bar(stat="identity") + geom_text(aes(label=Count),vjust=0) +theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 10))
+ggplot(SDRatio_simu,aes(x=Group,y=SDRatio)) + geom_bar(stat="identity")  + labs(x="",y="") + ylim(0,20) + scale_x_discrete(limits= c("Heteroscedasticity","Middle Heteroscedasticity","Low Heteroscedasticity","Homoscedasticity"))

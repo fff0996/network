@@ -60,3 +60,9 @@ ggplot(SDRatio_simu,aes(x=Group,y=SDRatio)) + geom_bar(stat="identity")  + labs(
 #2 Middle Heteroscedasticity  4.13090
 #3    Low Heteroscedasticity  1.94864
 #4          Homoscedasticity  1.14711
+
+
+tiff(filename= "/BiO/Hyein/our_hm3_GPS/Figure/Fig1D.tiff",res=300,width=2000,height=2000)
+ggplot(hete2_modeling,aes(X,Y)) + geom_point() +labs(x="X-value",y="Y-value") + ylim(-165,1500)
+dev.off()
+

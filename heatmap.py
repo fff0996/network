@@ -30,3 +30,17 @@ plt.figure(dpi=1000)
 plt.show()
 #fig.set_size_inches(10, 10)
 #plt.savefig('filename.png')
+
+
+plt.show()
+plt.rc('xtick',labelsize=5)
+plt.rc('ytick',labelsize=5)
+sns.heatmap(df, annot=True, fmt='d',cmap='YlGnBu')
+
+plt.show()
+plt.figure(figsize=(400, 400)) 
+
+plt.rc('xtick', labelsize=40)
+
+plt.rc('ytick', labelsize=40)
+sns.heatmap(df, annot=True, fmt='d',cmap='YlGnBu')

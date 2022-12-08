@@ -66,3 +66,5 @@ tiff(filename= "/BiO/Hyein/our_hm3_GPS/Figure/Fig1D.tiff",res=300,width=2000,hei
 ggplot(hete2_modeling,aes(X,Y)) + geom_point() +labs(x="X-value",y="Y-value") + ylim(-165,1500)
 dev.off()
 
+
+ggplot(r,aes(count,freq)) + geom_bar(stat="identity",width=.4) + labs(x="Number of High risk group",y="proportion")

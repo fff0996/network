@@ -9,3 +9,6 @@ circos.track(track.index = 1, panel.fun = function(x, y) {
 dev.off()
 
 circos.clear()
+
+
+

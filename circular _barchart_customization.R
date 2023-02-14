@@ -42,6 +42,7 @@ geom_segment(data=grid_data, aes(x = end, y = 2.0, xend = start, yend = 2.0), co
 geom_segment(data=grid_data, aes(x = end, y = 2.5, xend = start, yend = 2.5), colour = "grey", alpha=1, size=0.3 , inherit.aes = FALSE ) + 
 annotate("text", x = rep(max(data$id),5), y = c(0.5,  1,1.5, 2.0,2.5), label = c("0.5", "1","1.5", "2.0","2.5") , color="grey", size=3 , angle=0, fontface="bold", hjust=1)+
 geom_bar(aes(x=as.factor(id), y=value, fill=group), stat="identity", alpha=0.5) +
+geom_errorbar(aes(x=as.factor(id),ymin=ci1,ymax=ci2),width=0.4,colour="black",alpha=0.5) +
 ylim(-2.5,2.5) +  theme_minimal() +
   theme(
     legend.position = "none",

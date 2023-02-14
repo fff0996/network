@@ -1,5 +1,6 @@
 ## https://r-graph-gallery.com/297-circular-barplot-with-groups.html
-
+##ci구하는 공식
+##https://kicarussays.tistory.com/36
 library(tidyverse)
 
 # Set a number of 'empty bar' to add at the end of each group
@@ -43,7 +44,7 @@ geom_segment(data=grid_data, aes(x = end, y = 2.5, xend = start, yend = 2.5), co
 annotate("text", x = rep(max(data$id),5), y = c(0.5,  1,1.5, 2.0,2.5), label = c("0.5", "1","1.5", "2.0","2.5") , color="grey", size=3 , angle=0, fontface="bold", hjust=1)+
 geom_bar(aes(x=as.factor(id), y=value, fill=group), stat="identity", alpha=0.5) +
 geom_errorbar(aes(x=as.factor(id),ymin=ci1,ymax=ci2),width=0.4,colour="black",alpha=0.5) +
-ylim(-2.5,2.5) +  theme_minimal() +
+ylim(-2.5,3.0) +  theme_minimal() +
   theme(
     legend.position = "none",
     axis.text = element_blank(),
@@ -52,7 +53,7 @@ ylim(-2.5,2.5) +  theme_minimal() +
     plot.margin = unit(rep(-1,4), "cm") 
   ) +
   coord_polar() + 
-  geom_text(data=label_data, aes(x=id, y=value+0.1, label=individual, hjust=hjust), color="black", fontface="bold",alpha=0.6, size=2.5, angle= label_data$angle, inherit.aes = FALSE ) +
+  geom_text(data=label_data, aes(x=id, y=value+0.5, label=individual, hjust=hjust), color="black", fontface="bold",alpha=0.6, size=2.5, angle= label_data$angle, inherit.aes = FALSE ) +
   
   # Add base line information
   geom_segment(data=base_data, aes(x = start-1, y = -0.2, xend = end +1, yend = -0.2), colour = "black", alpha=0.8, size=0.6 , inherit.aes = FALSE ) +

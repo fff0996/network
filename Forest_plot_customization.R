@@ -61,3 +61,8 @@ axis.line.x.bottom = element_line())
 pdf("dd.pdf",width=15,height=20)
 plot_grid(top_row, bottom_row, ncol = 1, rel_heights = c(0.05, 1))
 dev.off()
+
+
+png("plot.png",width=10000,height=4000,res=500)
+plot_grid(top_row, bottom_row, ncol = 1, rel_heights = c(0.05, 1))
+dev.off()

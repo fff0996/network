@@ -1,3 +1,10 @@
+library(ggplot2)
+library(stringr)
+library(dplyr)
+library(forcats)
+library(cowplot)
+
+
 p1 <- mr2 |> 
 mutate(name=fct_reorder(name,group)) |>
 ggplot(aes(x=name,y=OR,ymin=ci1,ymax=ci2)) + 
@@ -66,3 +73,6 @@ dev.off()
 png("plot.png",width=10000,height=4000,res=500)
 plot_grid(top_row, bottom_row, ncol = 1, rel_heights = c(0.05, 1))
 dev.off()
+
+
+#reference : https://bggj.is/posts/forest-plot-table/

@@ -64,7 +64,7 @@ geom_text(aes(y=1,x=0.98,label="P"),size=5)+
 coord_cartesian(xlim = c(0, 1)) +
 theme_void() +
 theme(plot.margin = margin(t = 0, r = 5, b = 10, l = 5),
-axis.line.x.bottom = element_line())
+axis.line.x.bottom = element_line()
 pdf("dd.pdf",width=15,height=20)
 plot_grid(top_row, bottom_row, ncol = 1, rel_heights = c(0.05, 1))
 dev.off()

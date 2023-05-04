@@ -16,7 +16,7 @@ coord_flip() +
 labs(x=NULL,y=NULL)+
 theme(plot.margin = margin(t=5,r=-4,b=9,l=5))
 
-
+#OR 95%CI : epx(BETA - 1.96*SE)
 
 
 p2 <- mr2 |> 

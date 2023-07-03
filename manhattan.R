@@ -8,4 +8,6 @@ library(qqman)
 #  46   1  4 0.3960066 6.921055e-01
 #  46   1  5 3.2564858 1.130159e-03
 #  46   1  6 0.7915657 4.283618e-01
+
+
 manhattan(notcommongwas,genomewideline= -log10(6.36845e-07),suggestiveline=FALSE)

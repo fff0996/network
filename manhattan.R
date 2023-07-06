@@ -35,7 +35,7 @@ scale_x_continuous( label = axisdf$CHR, breaks= axisdf$center ) +
 scale_y_continuous(expand = c(0, 0) ) +     # remove space between plot area and x axis
 geom_abline(intercept=-log10(6.36845e-07),slope=0,colour="red") +
 #scale_shape_manual(values=c(15,16,17,18,21,22,23,24,37,0,1,2,3))+
-geom_point(data=subset(don, is_highlight=="yes"), color="orange", size=2) +
+geom_point(data=subset(don, is_highlight=="yes"), color="#FF0000", size=2) +
 
 
 # Custom the theme:

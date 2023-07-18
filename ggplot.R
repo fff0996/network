@@ -77,3 +77,4 @@ splots[[4]] <- I21.onset
 splots[[5]] <- G47.onset
 splots[[6]] <- I20.onset
 fig <- arrange_ggsurvplots(splots,ncol=2,nrow=3)
+gird.arrange(J33.onset$plot,J44.onset$plot,N18.onset$plot,I21.onset$plot,G47.onset$plot,I20.onset$plot,ncol=2,nrow=3)

@@ -68,11 +68,12 @@ dev.off()
 
 
 ggplot(r,aes(count,freq)) + geom_bar(stat="identity",width=.4) + labs(x="Number of High risk group",y="proportion")
-> splots <- list()
-> splots[[1]] <- J33.onset
-> splots[[2]] <- J44.onset
-> splots[[3]] <- N18.onset
-> splots[[4]] <- I21.onset
-> splots[[5]] <- G47.onset
-> splots[[6]] <- I20.onset
-> fig <- arrange_ggsurvplots(splots,ncol=2,nrow=3)
+
+splots <- list()
+splots[[1]] <- J33.onset
+splots[[2]] <- J44.onset
+splots[[3]] <- N18.onset
+splots[[4]] <- I21.onset
+splots[[5]] <- G47.onset
+splots[[6]] <- I20.onset
+fig <- arrange_ggsurvplots(splots,ncol=2,nrow=3)

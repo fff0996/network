@@ -1,17 +1,19 @@
 library(qqman)
 
 #> head(notcommongwas)
-#  SNP CHR BP    zscore            P
-#  46   1  1 2.2213771 2.635227e-02
-#  46   1  2 2.4510741 1.424700e-02
-#  46   1  3 5.7455191 9.153470e-09
-#  46   1  4 0.3960066 6.921055e-01
-#  46   1  5 3.2564858 1.130159e-03
-#  46   1  6 0.7915657 4.283618e-01
+#  SNP CHR BP P
+#  46   1  1 2.635227e-02
+#  46   1  2 1.424700e-02
+#  46   1  3 9.153470e-09
+#  46   1  4 6.921055e-01
+#  46   1  5 1.130159e-03
+#  46   1  6 4.283618e-01
+##In our case, 'SNP' column means 'Risk Factor'
 
 
 manhattan(notcommongwas,genomewideline= -log10(6.36845e-07),suggestiveline=FALSE)
 
+hl <- c('46','47','23108')
 
 #customize
 don <- notcommongwas %>% group_by(CHR) %>% summarise(chr_len=max(BP)) %>% 
@@ -20,8 +22,8 @@ left_join(notcommongwas,.,by=c("CHR"="CHR")) %>%
 arrange(CHR,BP) %>% 
 mutate(Disease = BP+tot) %>%
 
-mutate( is_highlight=ifelse(SNP %in% hl, "yes", "no")) %>%
-#mutate( is_annotate=ifelse(-log10(P)>4, "yes", "no")) 
+mutate( is_highlight=ifelse(SNP %in% hl, "yes", "no")) 
+#%>% mutate( is_annotate=ifelse(-log10(P)>4, "yes", "no")) 
 
 
 axisdf = don %>% group_by(CHR) %>% summarize(center=(max(Disease) + min(Disease))/2)

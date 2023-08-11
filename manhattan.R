@@ -1,3 +1,4 @@
+#https://r-graph-gallery.com/101_Manhattan_plot.html
 library(qqman)
 
 #> head(notcommongwas)

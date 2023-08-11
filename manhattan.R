@@ -33,7 +33,7 @@ axisdf = don %>% group_by(CHR) %>% summarize(center=(max(Disease) + min(Disease)
 ggplot(don,aes(x=Disease,y=-log10(P)))+
                #shape=rfchapter))+
 geom_point(aes(color=as.factor(CHR)),alpha=0.8,size=1.3) + 
-scale_color_manual(values=rep(c("grey","black"),20))+
+scale_color_manual(values=rep(c("grey","black"),47))+
 scale_x_continuous( label = axisdf$CHR, breaks= axisdf$center ) +
 scale_y_continuous(expand = c(0, 0) ) +     # remove space between plot area and x axis
 geom_abline(intercept=-log10(6.36845e-07),slope=0,colour="red") +

@@ -12,7 +12,7 @@ library(qqman)
 ##In our case, 'SNP' column means 'Risk Factor'
 
 
-manhattan(notcommongwas,genomewideline= -log10(6.36845e-07),suggestiveline=FALSE)
+manhattan(notcommongwas,genomewideline= -log10(6.377551e-07),suggestiveline=FALSE)
 
 hl <- c('46','47','23108')
 
